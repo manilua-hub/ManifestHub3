@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ManiLuaHub Web Search & Inspector
+    url: https://maniluahub.com
+    about: Search and inspect manifest Lua code in your browser
+  - name: OpenAPI Documentation
+    url: https://maniluahub.com/docs
+    about: RESTful API developer documentation
+  - name: Installation Tutorial
+    url: https://maniluahub.com/how-to-use
+    about: Step-by-step setup guides for Windows, macOS Whisky, and Steam Deck

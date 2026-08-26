@@ -1,0 +1,25 @@
+# ManifestHub — The Open Steam Manifest & Lua Registry
+
+> ManifestHub is the central open-source dataset and Git repository for ManiLuaHub.com. It stores dedicated per-AppID branches containing verified Steam manifest Lua routing scripts and key.vdf depot decryption keys for 62,288 games.
+
+## Core Resources
+
+- **Official Web Registry**: https://maniluahub.com
+- **Explore 62k Manifests**: https://maniluahub.com/explore
+- **OpenAPI Documentation**: https://maniluahub.com/docs
+- **Client Installation Guide**: https://maniluahub.com/how-to-use
+- **Frequently Asked Questions**: https://maniluahub.com/faq
+- **Client Download Hub**: https://maniluahub.com/download
+
+## Data Flow & Architecture
+
+1. **Branch-per-AppID Storage**:
+   - Branch: `origin/<appId>`
+   - Files: `<appId>.lua` and `key.vdf`
+2. **Fastly Raw CDN Streaming**:
+   - `https://raw.githubusercontent.com/maniluahub/ManifestHub/<appId>/<appId>.lua`
+   - `https://raw.githubusercontent.com/maniluahub/ManifestHub/<appId>/key.vdf`
+3. **Public REST APIs**:
+   - Search: `GET https://maniluahub.com/api/search?q={query}`
+   - Lua Script: `GET https://maniluahub.com/api/files/{appId}/lua`
+   - ZIP Package: `GET https://maniluahub.com/api/files/{appId}/zip`

@@ -1,0 +1,63 @@
+name: Validate Manifest & Lua Integrity
+
+on:
+  pull_request:
+    branches:
+      - '**'
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate File Formats & Cryptographic Keys
+        run: |
+          echo "=== ManiLuaHub Integrity Checker ==="
+          python3 -c "
+          import os, sys, re
+
+          branch = os.environ.get('GITHUB_HEAD_REF') or os.environ.get('GITHUB_REF_NAME', '')
+          print(f'Checking branch: {branch}')
+
+          if branch in ('main', 'master'):
+              print('Main branch - checking root documentation & archive files.')
+              assert os.path.exists('README.md'), 'README.md must exist'
+              assert os.path.exists('LICENSE'), 'LICENSE must exist'
+              sys.exit(0)
+
+          # Manifest branch verification
+          app_id = branch.strip()
+          if not re.match(r'^\d+$', app_id):
+              print(f'Branch name {branch} is not a numeric Steam App ID')
+              sys.exit(1)
+
+          lua_file = f'{app_id}.lua'
+          key_file = 'key.vdf'
+
+          if not os.path.exists(lua_file):
+              print(f'Missing required Lua script: {lua_file}')
+              sys.exit(1)
+
+          with open(lua_file, 'r', encoding='utf-8', errors='ignore') as f:
+              lua_content = f.read()
+              if 'addappid' not in lua_content and 'setManifestid' not in lua_content:
+                  print(f'Warning: {lua_file} does not contain standard Steam routing functions')
+
+          if os.path.exists(key_file):
+              with open(key_file, 'r', encoding='utf-8', errors='ignore') as f:
+                  vdf_content = f.read()
+                  if 'DecryptionKey' not in vdf_content and 'depots' not in vdf_content:
+                      print('Warning: key.vdf does not contain standard VDF structure')
+
+          print(f'✅ AppID {app_id} integrity check passed!')
+          "

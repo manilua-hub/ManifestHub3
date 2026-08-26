@@ -1,0 +1,43 @@
+name: 🎮 Request New Steam App ID
+description: Request a manifest descriptor and depot keys for an uncataloged Steam game.
+title: "[Request]: AppID "
+labels: ["enhancement", "new-manifest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand the **ManiLuaHub** open registry!
+        Please verify that the game is not already available at [maniluahub.com](https://maniluahub.com) before submitting.
+
+  - type: input
+    id: app_id
+    attributes:
+      label: Steam App ID
+      description: The numeric AppID from the Steam store URL (e.g. 730 for CS2).
+      placeholder: "730"
+    validations:
+      required: true
+
+  - type: input
+    id: game_name
+    attributes:
+      label: Game Name
+      description: The full title of the game.
+      placeholder: "Counter-Strike 2"
+    validations:
+      required: true
+
+  - type: input
+    id: store_url
+    attributes:
+      label: Steam Store Link
+      description: Official Steam store URL.
+      placeholder: "https://store.steampowered.com/app/730/"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Details & Depot Notes
+      description: Any specific DLCs, betas, or multi-depot configurations needed.

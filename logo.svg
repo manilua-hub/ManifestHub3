@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Space Obsidian Gradient -->
+    <linearGradient id="luaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0914"/>
+      <stop offset="50%" stop-color="#070610"/>
+      <stop offset="100%" stop-color="#030206"/>
+    </linearGradient>
+
+    <!-- Lua Royal Indigo to Neon Violet Gradient -->
+    <linearGradient id="luaIndigoViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="45%" stop-color="#6366f1"/>
+      <stop offset="85%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Glowing Cyber Violet Accent -->
+    <linearGradient id="neonLavender" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e879f9"/>
+      <stop offset="50%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Cyan Node Satellite Gradient -->
+    <linearGradient id="satelliteCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="luaGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Base Cyber Squircle Container -->
+  <rect width="512" height="512" rx="120" fill="url(#luaBg)" stroke="#6366f1" stroke-width="10" stroke-opacity="0.55"/>
+
+  <!-- Orbital Ring Geometry -->
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="10 8" opacity="0.3"/>
+  <circle cx="256" cy="256" r="145" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Lua Moon Orbit & Manifest Branching Hub -->
+  <g filter="url(#luaGlow)">
+    <!-- Central Lua Master Orbital Sphere -->
+    <circle cx="256" cy="256" r="88" fill="#0c0a1a" stroke="url(#luaIndigoViolet)" stroke-width="18"/>
+
+    <!-- Crescent Moon Shadow Arc (Iconic Lua homage) -->
+    <path d="M 230 180 A 82 82 0 0 0 310 320 A 88 88 0 1 1 230 180 Z" fill="url(#luaIndigoViolet)" opacity="0.35"/>
+
+    <!-- Lua Satellite Node -->
+    <circle cx="360" cy="175" r="26" fill="url(#neonLavender)" stroke="#030206" stroke-width="6"/>
+
+    <!-- Manifest Tree Branching Graph Connectors -->
+    <!-- Top-Left Branch -->
+    <line x1="195" y1="195" x2="135" y2="135" stroke="url(#luaIndigoViolet)" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="135" cy="135" r="22" fill="#0c0a1a" stroke="url(#luaIndigoViolet)" stroke-width="10"/>
+
+    <!-- Bottom-Left Branch -->
+    <line x1="195" y1="315" x2="135" y2="375" stroke="url(#neonLavender)" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="135" cy="375" r="22" fill="#0c0a1a" stroke="url(#neonLavender)" stroke-width="10"/>
+
+    <!-- Bottom-Right Branch -->
+    <line x1="315" y1="315" x2="380" y2="375" stroke="url(#satelliteCyan)" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="380" cy="375" r="22" fill="#0c0a1a" stroke="url(#satelliteCyan)" stroke-width="10"/>
+  </g>
+
+  <!-- Central Code Brackets & Slash < / > Symbol -->
+  <g filter="url(#softGlow)">
+    <!-- Left Bracket < -->
+    <path d="M 228 225 L 205 256 L 228 287" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Right Bracket > -->
+    <path d="M 284 225 L 307 256 L 284 287" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Center Code Slash / -->
+    <line x1="266" y1="216" x2="246" y2="296" stroke="url(#neonLavender)" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>

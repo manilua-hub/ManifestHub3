@@ -1,0 +1,39 @@
+name: ⚠️ Report Broken / Outdated Manifest
+description: Report an issue with an existing manifest, broken Lua syntax, or invalid depot keys.
+title: "[Bug]: Manifest issue for AppID "
+labels: ["bug", "manifest-update-needed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide details about the affected game and error messages.
+
+  - type: input
+    id: app_id
+    attributes:
+      label: Steam App ID
+      description: The numeric AppID of the affected game.
+      placeholder: "2358720"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      options:
+        - Outdated manifest after official Steam game update
+        - Invalid or expired key.vdf decryption key
+        - Lua syntax parsing error
+        - Missing DLC or Depot partition
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: client_log
+    attributes:
+      label: Client Error Log or Screenshot
+      description: Relevant logs or error codes from your client.
+    validations:
+      required: false
