@@ -10,6 +10,7 @@
 [![Catalog](https://img.shields.io/badge/Catalog-62%2C257%20Verified%20Branches-10b981?style=for-the-badge&logo=steam&logoColor=white)](https://maniluahub.com/explore)
 [![OpenAPI](https://img.shields.io/badge/API-Free%20%26%20Keyless-8b5cf6?style=for-the-badge&logo=openapi-initiative&logoColor=white)](https://maniluahub.com/docs)
 [![Loaders](https://img.shields.io/badge/Compatible-Watt%20Toolkit%20%7C%20SteamTools-0284c7?style=for-the-badge&logo=linux&logoColor=white)](https://maniluahub.com/download)
+[![Booster](https://img.shields.io/badge/Game_Booster-GearUP_5x_Speed-ff4655?style=for-the-badge&logo=fastlane&logoColor=white)](https://gearup.gg/aff?p=KTeQ719IlU3u)
 [![License](https://img.shields.io/badge/License-MIT-amber?style=for-the-badge)](LICENSE)
 
 <p align="center">
@@ -22,7 +23,7 @@
 </p>
 
 <p align="center">
-  <b>English</b> • <a href="README.zh-CN.md">简体中文</a>
+  <b>English</b> • <a href="README.zh-CN.md">简体中文 (含雷神加速器免费福利)</a>
 </p>
 
 </div>
@@ -119,6 +120,16 @@ curl -s -O -J "https://maniluahub.com/api/files/2358720/zip"
 ```
 
 Interactive OpenAPI Swagger specifications and full schema references are available at **[maniluahub.com/docs](https://maniluahub.com/docs)**.
+
+---
+
+## ⚡ Recommended Network Optimizer (Global Players)
+
+For gamers experiencing high ping, packet loss, or slow Steam CDN downloads, we recommend **GearUP Booster**:
+- 🚀 **Patented Adaptive Intelligent Routing** — Dynamic multi-path latency reduction directly to Steam CDN & multiplayer game server clusters.
+- 📥 **Accelerated Depot Downloads** — Up to 5x faster manifest binary chunks synchronization.
+- 🎮 **Zero Configuration** — Fully optimized for Windows 10/11, macOS, and handheld gaming.
+- 👉 **[Download GearUP Booster (Free Trial)](https://gearup.gg/aff?p=KTeQ719IlU3u)**
 
 ---
 

@@ -10,6 +10,7 @@
 [![Catalog](https://img.shields.io/badge/Catalog-62%2C257%20Verified%20Branches-10b981?style=for-the-badge&logo=steam&logoColor=white)](https://maniluahub.com/zh/explore)
 [![OpenAPI](https://img.shields.io/badge/API-Free%20%26%20Keyless-8b5cf6?style=for-the-badge&logo=openapi-initiative&logoColor=white)](https://maniluahub.com/zh/docs)
 [![Loaders](https://img.shields.io/badge/Compatible-Watt%20Toolkit%20%7C%20SteamTools-0284c7?style=for-the-badge&logo=linux&logoColor=white)](https://maniluahub.com/zh/download)
+[![网络加速福利](https://img.shields.io/badge/雷神加速器-免费50小时口令%EF%BC%9ASTEAMTOOLS-ff5900?style=for-the-badge&logo=speedtest&logoColor=white)](https://www.leigod.com)
 [![License](https://img.shields.io/badge/License-MIT-amber?style=for-the-badge)](LICENSE)
 
 <p align="center">
@@ -40,6 +41,18 @@
 > - 👁️ **透明代码审计**：在线查看语法高亮的 Lua 清单蓝图与 Depot 解密密钥树。
 > - 📦 **一键打包**：直接下载免配置的 `<AppID>.lua` 与 `key.vdf` ZIP 压缩包，解压即用。
 > - 🔌 **免费 OpenAPI**：为机器人、社区工具及自动化脚本提供毫秒级 JSON 接口。
+
+---
+
+## 🎁 玩家联机与网络加速专享福利（雷神加速器）
+
+针对 Steam 商店访问卡顿、CDN 下载慢及多人联机掉线问题，推荐使用**雷神加速器**：
+
+- 🎁 **专属兑换码**：**`STEAMTOOLS`**
+- ⚡ **专属福利**：免费领取 **50 小时超长体验时长**
+- ⏱️ **时长随时可暂停**：不玩不扣时，一次领取长久可用，适合各类联机与单机玩家
+- 🚀 **专线极速直连**：自研金融级专线，畅快加速 Steam、Apex、黑神话、绝地求生等全平台热门大作
+- 👉 **兑换方式**：下载登录[雷神加速器客户端](https://www.leigod.com)，点击顶部「充值中心」/「口令兑换」，输入 **`STEAMTOOLS`** 即可秒到账！
 
 ---
 
