@@ -13,12 +13,16 @@
 [![License](https://img.shields.io/badge/License-MIT-amber?style=for-the-badge)](LICENSE)
 
 <p align="center">
-  <a href="https://maniluahub.com">🌐 <b>Web Explorer (网页端)</b></a> •
+  <a href="https://maniluahub.com">🌐 <b>Web Explorer</b></a> •
   <a href="https://maniluahub.com/explore">🎮 62k Game Catalog</a> •
   <a href="https://maniluahub.com/docs">🔌 OpenAPI Docs</a> •
-  <a href="https://maniluahub.com/how-to-use">📖 Tutorial (使用教程)</a> •
+  <a href="https://maniluahub.com/how-to-use">📖 Tutorial</a> •
   <a href="https://maniluahub.com/download">💻 Client Center</a> •
   <a href="https://maniluahub.com/faq">❓ FAQ</a>
+</p>
+
+<p align="center">
+  <b>English</b> • <a href="README.zh-CN.md">简体中文</a>
 </p>
 
 </div>
@@ -26,31 +30,32 @@
 ---
 
 > [!TIP]
-> ### ⚡ 不需要克隆 6 万多个 Git 分支！使用官方 Web 探索器秒级下载
-> ### Don't Clone 62,000 Branches — Use the Free Web Explorer!
+> ### ⚡ Don't Clone 62,000 Git Branches — Use the Free Web Explorer!
 > 
-> 查验与下载游戏清单无需通过 Git 本地拉取庞大分支。直接访问 **[ManiLuaHub.com](https://maniluahub.com)**：
+> You do **not** need to manually clone 62,000 Git branches to inspect or download game manifests.
 > 
-> 👉 **[立即访问 ManiLuaHub.com (Launch Web App)](https://maniluahub.com)**
+> Visit **[ManiLuaHub.com](https://maniluahub.com)** to instantly search any title, inspect Lua blueprints, and download ready-to-use bundles:
 > 
-> - 🔍 **瞬时搜索**：支持游戏中文名、英文名及 Steam AppID 极速检索（如《黑神话：悟空》`2358720`、《赛博朋克2077》`1091500`）。
-> - 👁️ **透明代码审计**：在线查看语法高亮的 Lua 清单蓝图与 Depot 解密密钥树。
-> - 📦 **一键打包**：直接下载免配置的 `<AppID>.lua` 与 `key.vdf` ZIP 压缩包，解压即用。
-> - 🔌 **免费 OpenAPI**：为机器人、社区工具及自动化脚本提供毫秒级 JSON 接口。
+> 👉 **[Launch ManiLuaHub Web Explorer](https://maniluahub.com)**
+> 
+> - 🔍 **Instant Search**: Look up any game title (e.g. *Black Myth: Wukong*, *Cyberpunk 2077*, *ELDEN RING*) or numeric Steam AppID.
+> - 👁️ **Live Code Inspection**: Preview syntax-highlighted Lua blueprints and Depot decryption key trees in your browser.
+> - 📦 **1-Click Clean ZIP**: Download ready-to-use `<AppID>.lua` + `key.vdf` ZIP archives without running Git commands.
+> - 🔌 **Free OpenAPI v1**: High-performance REST endpoints for Discord bots, community scripts, and developer tools.
 
 ---
 
-## 📖 What is ManifestHub? / 项目简介
+## 📖 What is ManifestHub?
 
-**ManifestHub** 是由 **ManiLuaHub** 维护的分布式开源 Steam 清单索引仓库，收录全网超 **62,257+ 款 Steam 游戏与 DLC** 的标准清单配置与 Lua 入库脚本。
+**ManifestHub** is a decentralized, open-access Git repository indexing Steam depot manifest descriptors and verified Lua blueprints for over **62,257 Steam games and DLCs**.
 
-- **Branch-per-AppID 分支架构**：每个收录的 Steam 游戏分配独立 Git 分支（例如 `origin/730` 对应 CS2，`origin/2358720` 对应黑神话悟空），支持轻量按需检索。
-- **纯文本安全审计**：仅收录只读 `<AppID>.lua` 指令脚本与 `key.vdf` Valve 标准密钥描述文件，**绝对不包含任何二进制可执行文件或第三方注入器**，安全透明。
-- **通用客户端兼容**：原生兼容 **Watt Toolkit (Steam++)**、**SteamTools**、**GreenLuma**、**SmokeAPI**、**Koaloader**、**SteamOS (Steam Deck)** 及 macOS **Whisky / CrossOver**。
+- **Branch-per-AppID Architecture**: Every cataloged Steam title is assigned an independent Git branch matching its numeric AppID (e.g. `origin/730` for *Counter-Strike 2*, `origin/2358720` for *Black Myth: Wukong*).
+- **Zero Binary Tampering**: Only plain-text `<AppID>.lua` instruction scripts and standard `key.vdf` Valve Data Format decryption descriptors are stored. No executable files, DLLs, or third-party loaders are ever hosted.
+- **Universal Loader Compatibility**: Compatible with all standard Steam manifest routing tools including **Watt Toolkit**, **SteamTools**, **GreenLuma**, **SmokeAPI**, **Koaloader**, macOS **Whisky**, and **SteamOS (Steam Deck)**.
 
 ---
 
-## 🛠️ Architecture & Edge Data Flow / 架构与数据流
+## 🛠️ Architecture & Edge Data Flow
 
 ```text
        ManiLuaHub.com Web App & OpenAPI Gateway (Cloudflare Edge)
@@ -71,66 +76,66 @@
 
 ---
 
-## ⚡ Key Highlights / 核心特性
+## ⚡ Key Highlights
 
-- 🔍 **Live Code Inspector** — 在线语法高亮审查 Lua 蓝图代码，杜绝未知风险。
-- 🌳 **Depot Key Tree** — 可视化浏览分卷 ID、GID 与对应 AES-256 解密密钥。
-- 🌐 **Sub-35ms Edge Resolution** — 全球 Anycast 边缘网络加速，高频资源毫秒级响应。
-- 🛡️ **Cryptographic Integrity** — 所有清单均校验公开 SHA-256 哈希完整性。
-- 🔓 **Free & Keyless REST API** — 免密钥、无限制的开放式 OpenAPI 端点。
-
----
-
-## 🚀 3 步快速上手 (Quick Start)
-
-1. 打开 **[ManiLuaHub.com](https://maniluahub.com)**。
-2. 搜索游戏名称（如 *泰拉瑞亚* 或 *Elden Ring*）或数字 AppID（如 `1245620`）。
-3. 点击 **Download ZIP Bundle**，将解压出的 `.lua` 与 `key.vdf` 放入对应的工具目录（如 Watt Toolkit 清单目录），启动 Steam 即可畅玩。
+- 🔍 **Live Code Inspector** — Review syntax-highlighted Lua blueprints before downloading to ensure total transparency.
+- 🌳 **Interactive Depot Tree** — Visualize encrypted chunk mappings, depot IDs, and corresponding AES-256 keys.
+- 🌐 **Sub-35ms Edge Latency** — Globally distributed Anycast edge network with intelligent caching.
+- 🛡️ **Cryptographic Integrity** — All manifests are verified against public SHA-256 checksums.
+- 🔓 **Free & Keyless REST API** — Zero API keys and zero rate limiting on public manifest endpoints.
 
 ---
 
-## 🔌 Free OpenAPI 3.0 REST Endpoints / 开放接口
+## 🚀 Quick Start in 3 Steps
 
-开发者可直接调用 ManiLuaHub 的开放 API 构建第三方工具或社区机器人：
+1. Navigate to **[ManiLuaHub.com](https://maniluahub.com)**.
+2. Search by game title (e.g. *Terraria* or *Elden Ring*) or numeric AppID (e.g. `1245620`).
+3. Click **Download ZIP Bundle**, extract `<AppID>.lua` and `key.vdf` into your loader directory, and launch Steam.
 
-### 1. 查询游戏元数据与清单状态 (Metadata & Endpoints)
+---
+
+## 🔌 Free OpenAPI 3.0 REST Endpoints
+
+Developers can consume ManiLuaHub data programmatically for bots, CLI utilities, and community extensions:
+
+### 1. Game Metadata & Manifest Status
 ```bash
 curl -s "https://maniluahub.com/api/v1/manifest/2358720" | jq .
 ```
 
-### 2. 流式获取纯净 Lua 蓝图脚本 (Raw Lua Stream)
+### 2. Stream Raw Lua Blueprint
 ```bash
 curl -s "https://maniluahub.com/api/files/2358720/lua" -o 2358720.lua
 ```
 
-### 3. 获取 key.vdf 密钥文件 (Raw Key VDF)
+### 3. Fetch Decryption Keys (key.vdf)
 ```bash
 curl -s "https://maniluahub.com/api/files/2358720/key" -o key.vdf
 ```
 
-### 4. 一键下载完整 ZIP 压缩包 (ZIP Bundle Download)
+### 4. Download Full Manifest ZIP Archive
 ```bash
 curl -s -O -J "https://maniluahub.com/api/files/2358720/zip"
 ```
 
-完整交互式 OpenAPI Swagger 文档请参阅：**[maniluahub.com/docs](https://maniluahub.com/docs)**。
+Interactive OpenAPI Swagger specifications and full schema references are available at **[maniluahub.com/docs](https://maniluahub.com/docs)**.
 
 ---
 
-## 🤝 Contributing / 参与贡献
+## 🤝 Contributing
 
-欢迎社区共同维护庞大的 Steam 清单数据库：
+We welcome community contributions to keep game branches up-to-date:
 
-- **提交新游戏 AppID 需求** → [GitHub Issues](https://github.com/manilua-hub/ManifestHub3/issues)
-- **反馈清单失效或密钥变动** → [提交反馈 Issue](https://github.com/manilua-hub/ManifestHub3/issues)
-- **提交 Pull Request** → 欢迎基于 AppID 命名分支提交更新。
+- **Request New App ID** → [Open an App Request](https://github.com/manilua-hub/ManifestHub3/issues)
+- **Report Outdated / Broken Manifest** → [Report an Issue](https://github.com/manilua-hub/ManifestHub3/issues)
+- **Submit Pull Requests** → Branch off as `<AppID>`, commit `<AppID>.lua` and `key.vdf`, and submit a PR.
 
 ---
 
-## 📄 License & Disclaimer / 开源协议与免责声明
+## 📄 License & Disclaimer
 
-- **开源协议**：本项目代码与开源数据集采用 [MIT License](LICENSE) 授权。
-- **免责声明**：Steam、SteamOS 及 Steam 徽标是 Valve Corporation 的注册商标。ManiLuaHub 为独立的非盈利开源社区项目，与 Valve Corporation 概无关联。
+- **Dataset & Code License**: [MIT License](LICENSE) © 2026 ManiLuaHub Team.
+- **Trademark Notice**: Steam, SteamOS, and Valve are registered trademarks of Valve Corporation. ManiLuaHub is an independent open-source project and is neither affiliated with, endorsed by, nor sponsored by Valve Corporation.
 
 ---
 
