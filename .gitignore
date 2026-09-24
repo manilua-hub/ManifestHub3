@@ -6,3 +6,7 @@ node_modules/
 .idea/
 tmp/
 *.tmp
+.push_state.json*
+scripts/
+*.pid
+push.pid
